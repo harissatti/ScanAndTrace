@@ -1,7 +1,6 @@
 # ScanAndTrace
 Scan and Trace
-The Scan and Trace smart contract is an Ethereum-based contract that implements the ERC1155 token standard. It enables the creation and management of fungible tokens with unique token IDs and associated metadata.we use this for scan and trace
-the product. the smart contract give unique id to each product and smae id is use for QRcode .when ever user came and scan the product qr code the code tell about the product details.
+The Scan and Trace smart contract is an Ethereum-based contract that implements the ERC1155 token standard. It enables the creation and management of fungible tokens with unique token IDs and associated metadata.we use this for scan and trace the product. the smart contract give unique id to each product and same id is use for QRcode id generator .when ever user came and scan the product qr code direct the user to website link where it tell about the product details.
 
 
 Features
