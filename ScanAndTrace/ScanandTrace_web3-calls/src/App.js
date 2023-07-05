@@ -185,48 +185,47 @@ function App() {
     setUserInfo(userData);
     setIsConnected(true);
   };
-  return (
-    <div className="app">
-      
-      <div className="app-header">
-        <h1>MetaMask Connection With Web3 js</h1>
-      </div>
-      <div className="app-wrapper">
-        {!isConnected && (
-          <div>
-            <button className="app-buttons__login" onClick={onConnect}>
-              Connect to MetaMask
-            </button>
-          </div>
-        )}
-      </div>
-      {isConnected && (
-        <div className="app-wrapper">
-          <div className="app-details">
-            <h2> You are connected to metamask.</h2>
-            <div className="app-account">
-              <span>Account number:</span>
-              {userInfo.account}
-            </div>
-            <div className="app-balance">
-              <span>Balance:</span>
-              {userInfo.balance}
-            </div>
-            <div className="app-connectionid">
-              <span>Chain ID:</span>
-              {userInfo.connectionid}
-            </div>
-          </div>
-          <div>
-            <button className="app-buttons__logout" onClick={onDisconnect}>
-              Disconnect
-            </button>
-          </div>
-          <ScanTrace web3Obj={web3Obj} userInfo={userInfo} />
-          
-        </div>
-      )}
+ return (
+  <div className="app">
+    <div className="app-header">
+      <h1>MetaMask Connection With Web3 js</h1>
     </div>
-  );
+    {!isConnected && (
+      <div className="app-wrapper">
+        <div>
+          <button className="app-buttons__login" onClick={onConnect}>
+            Connect to MetaMask
+          </button>
+        </div>
+      </div>
+    )}
+    {isConnected && (
+      <div className="app-wrapper">
+        <div className="app-details">
+          <h2> You are connected to MetaMask.</h2>
+          <div className="app-account">
+            <span>Account number:</span>
+            {userInfo.account}
+          </div>
+          <div className="app-balance">
+            <span>Balance:</span>
+            {userInfo.balance}
+          </div>
+          <div className="app-connectionid">
+            <span>Chain ID:</span>
+            {userInfo.connectionid}
+          </div>
+        </div>
+        <div>
+          <button className="app-buttons__logout" onClick={onDisconnect}>
+            Disconnect
+          </button>
+        </div>
+        <ScanTrace web3Obj={web3Obj} userInfo={userInfo} />
+      </div>
+    )}
+  </div>
+);
+
 }
 export default App;
